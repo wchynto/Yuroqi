@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: f49ceace1d2da0c439eb76e387a5b29b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Kurri Island Caps PERSONAL
+  fontNames:
+  - Kurri Island Caps PERSONAL
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b3c4b760f5401254086a807e0ac40e17, type: 3}
+  - {fileID: 12800000, guid: 4acc1c8137641194286ed6a9dccda08f, type: 3}
+  - {fileID: 12800000, guid: 205b0db477ad8fb499fcd60b6239d981, type: 3}
+  - {fileID: 12800000, guid: 78fb870807c6b8c40b73667541b55dc5, type: 3}
+  - {fileID: 12800000, guid: e289f73b7549a7e469ab8893af9b12a7, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

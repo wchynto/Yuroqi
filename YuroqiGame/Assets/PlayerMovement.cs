@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour {
 	Rigidbody2D rb;
 	public float speed;
 	Animator anim;
+	public float force;
+    public bool isGrounded = true;
 
 	void Start()
 	{
@@ -15,9 +17,9 @@ public class PlayerMovement : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 	}
 
-	void Update()
+	void FixedUpdate()
 	{
-		float keyX = Input.GetAxisRaw ("Horizontal");
+        float keyX = Input.GetAxisRaw ("Horizontal");
 		rb.velocity = new Vector2 (keyX * speed * Time.deltaTime, rb.velocity.y);
 
 		if (keyX > 0) 
@@ -35,5 +37,28 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			anim.SetBool ("isRunning", false);
 		}
+
+
+        Jump();
 	}
+
+	void Jump()
+	{
+		if (Input.GetKey(KeyCode.Space) && isGrounded)
+		{
+            rb.AddForce(new Vector2(0f, force * Time.deltaTime), ForceMode2D.Impulse);
+            isGrounded = false;
+		}
+	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject)
+        {
+            isGrounded = true;
+        }
+    }
+
+
+
 }
