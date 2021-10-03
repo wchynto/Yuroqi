@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator> ();
+
 	}
 
 	void FixedUpdate()

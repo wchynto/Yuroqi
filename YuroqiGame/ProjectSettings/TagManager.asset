@@ -6,6 +6,7 @@ TagManager:
   tags:
   - true box
   - hole
+  - common box
   layers:
   - Default
   - TransparentFX

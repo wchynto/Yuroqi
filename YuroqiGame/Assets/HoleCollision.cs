@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -6,8 +6,10 @@ using TMPro;
 public class HoleCollision : MonoBehaviour
 {
 
+    public GameManager gameManager;
     public List<GameObject> valueableBox;
     public int countsValuableBox;
+    
 
     void Start()
     {
@@ -22,7 +24,13 @@ public class HoleCollision : MonoBehaviour
           countsValuableBox += 1;
           
           valueableBox.Add(other.gameObject);
-        
+          
+      }
+
+      if (countsValuableBox == 3){
+
+          gameManager.GetComponent<GameManager>().LevelComplete();
+
       }
     }
 
